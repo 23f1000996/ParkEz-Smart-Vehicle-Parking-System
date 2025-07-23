@@ -1,5 +1,3 @@
----
-
 # 🚗 ParkEz: Smart Vehicle Parking System
 
 > **Your seamless solution for effortless parking management!**
