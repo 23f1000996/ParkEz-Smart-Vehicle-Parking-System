@@ -1,5 +1,3 @@
-Here’s the **complete markdown-formatted `README.md`** for your project **ParkEz: Smart Vehicle Parking System** — neatly organized, professional, and easy to follow:
-
 ---
 
 # 🚗 ParkEz: Smart Vehicle Parking System
