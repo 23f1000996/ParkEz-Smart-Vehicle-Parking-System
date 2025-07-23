@@ -28,7 +28,27 @@ Your seamless solution for effortless parking!
 
 ---
 
-## 🚀 Get Started in Minutes!
+## 🚀 Get Started in Minutes
+
+📁 Repository Structure
+csharp
+Copy
+Edit
+parkez/
+├── instance/
+│   └── parking.db            # SQLite database (auto-generated)
+├── static/
+│   └── css/
+│       └── style.css         # Custom styles
+├── templates/
+│   ├── admin_dashboard.html  # Admin panel
+│   ├── base.html             # Shared layout
+│   ├── login.html            # Login form
+│   ├── lots.html             # Parking lot booking interface
+│   ├── register.html         # Registration page
+│   └── user_dashboard.html   # User dashboard
+├── app.py                    # Flask app logic
+└── README.md                 # Project documentation
 
 ### 1️⃣ Clone the Repository
 
