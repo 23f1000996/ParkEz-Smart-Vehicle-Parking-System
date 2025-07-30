@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Book a Parking Spot{% endblock %}
+{% block content %}
+<h2>Choose an Available Parking Lot</h2>
+<p>The system will automatically assign the first available spot in the lot you choose.</p>
+<hr>
+
+<div class="row">
+    {% for item in lots_with_availability %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.lot.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ item.lot.address }}, {{ item.lot.pincode }}</h6>
+                <p class="card-text">
+                    <strong>Price:</strong> ${{ "%.2f"|format(item.lot.price) }}/hour<br>
+                    <strong>Available Spots:</strong> 
+                    <span class="badge {% if item.available_spots > 0 %}bg-success{% else %}bg-danger{% endif %}">{{ item.available_spots }} / {{ item.lot.capacity }}</span>
+                </p>
+            </div>
+            <div class="card-footer">
+                {% if item.available_spots > 0 %}
+                <form action="{{ url_for('book') }}" method="POST">
+                    <input type="hidden" name="lot_id" value="{{ item.lot.id }}">
+                    <button type="submit" class="btn btn-warning w-100">Book Now</button>
+                </form>
+                {% else %}
+                <button class="btn btn-secondary w-100" disabled>Lot Full</button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col">
+        <p class="text-center">No parking lots are currently available or configured by the administrator.</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

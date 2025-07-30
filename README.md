@@ -1,6 +1,6 @@
 # 🚗 ParkEz: Smart Vehicle Parking System
 
-> **Your seamless solution for effortless parking management!**
+> **Your seamless solution for effortless parking management**
 > **ParkEz** is a multi-user web application built with **Flask**, enabling **Admins** and **Users** to efficiently manage parking lots and vehicle bookings.
 
 ---
